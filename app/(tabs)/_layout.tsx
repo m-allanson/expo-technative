@@ -32,6 +32,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="doughnuts"
+        options={{
+          title: 'Doughnuts',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'beaker' : 'beaker-outline'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
