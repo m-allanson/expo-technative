@@ -1,20 +1,13 @@
-# Welcome to your Expo app 👋
+# About
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). It's based on [Expo's _Getting started_ guide](https://docs.expo.dev/get-started/introduction/).
 
-## Get started
+I've added an extra screen to the app to experiment with maps and geolocation.
 
-1. Install dependencies
+## Getting started
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
+- `npm install`
+- `npx expo start`
 
 In the output, you'll find options to open the app in a
 
@@ -25,26 +18,10 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Further info
 
-When you're ready, run:
+This demo attemps to add a map using `react-native-maps`. However, trying to support maps for the web platform, I ran into the following issue: https://github.com/react-native-maps/react-native-maps/issues/4641
 
-```bash
-npm run reset-project
-```
+A suggested fix is [to use `react-native-web-maps` for the web platform maps](https://teovillanueva.github.io/react-native-web-maps/), but I didn't have much success in the time available.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+For now, on web you'll see a "maps not available" message.
