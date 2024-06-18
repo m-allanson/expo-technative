@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { getDistance } from 'geolib';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Collapsible } from '@/components/Collapsible';
+import MapView, { Marker } from '@/components/Map';
 
 const doughnutsLocation = {
   latitude: 51.51543151117076,
@@ -82,6 +82,7 @@ export default function DoughnutScreen() {
     <ScrollView>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Doughnut Distance</ThemedText>
+
         <MapView
           style={styles.map}
           region={region}
@@ -100,6 +101,7 @@ export default function DoughnutScreen() {
             />
           ))}
         </MapView>
+
         <Collapsible title="Current map position">
           <ThemedText>Lat: {region.latitude}</ThemedText>
           <ThemedText>Lon: {region.longitude}</ThemedText>
